@@ -1,0 +1,25 @@
+~ $ git add --all
+~ $ git commit -m "Initial commit"
+~ $ git push -u origin master
+always remember to use this to update onto github "everyday".
+
+after I have the repository I start to install the jekyll.
+sudo apt-get install gem
+sudo gem install jekyll
+**Notice:
+	I faced a problem while I am installing the jekyll:
+**********************************************************
+Building native extensions.  This could take a while...
+ERROR:  Error installing jekyll:
+	ERROR: Failed to build gem native extension.
+current directory: /var/lib/gems/2.3.0/gems/ffi-1.9.18/ext/ffi_c
+/usr/bin/ruby2.3 -r ./siteconf20170315-13277-ucav6r.rb extconf.rb
+mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+**********************************************************
+So the solution is to install ruby-dev, I am using Ubuntu 16.04 and this is also works for Debian user.
+	sudo apt-get install ruby-dev
+
+For some Fedora user, this solution might work:
+	yum -y install gcc mysql-devel ruby-devel rubygems
+	gem install -y mysql -- --with-mysql-config=/usr/bin/mysql_config
+
