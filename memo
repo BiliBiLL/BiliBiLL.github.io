@@ -1,0 +1,9 @@
+# Differ from using mkvirtualenv, the way show below can also call site-liberaries in virtual environment.
+virtualenv --system-site-packages ~/.virtualenvs/tensorflow (I use tf in pelican)
+# if we add options within, "virtualenv -p python3 --system-site-packages ~/.virtualenvs/tensorflow", it will work for python 3.0 version.
+
+#INstall TensorFlow, when you cannot simplely sun "pip install tensorflow".
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.10.0-cp27-none-linux_x86_64.whl
+sudo pip install --upgrade $TF_BINARY_URL
+
+
